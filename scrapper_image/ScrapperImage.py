@@ -15,7 +15,7 @@ from urllib.request import urlretrieve
 
 class ScrapperImage:
     
-    def createImageurl(searchterm):
+    def createImageUrl(searchterm):
         searchterm = searchterm.split()
         searchterm="+".join(searchterm)
         web_url = "https://www.google.com/search?q="+ searchterm + "&source=lnms&tbm=isch"
