@@ -24,7 +24,7 @@ def home():
 @app.route('/showImages')
 @cross_origin()
 def displayimages():
-    listimages=os.listdir("Scrapping_images/static")
+    listimages=os.listdir("static")
     print(listimages)
     
     try:
@@ -47,7 +47,7 @@ def searchImage(): # This basically uses the index.html to get the keyword enter
         
     imagescrapperutil = BusinessLayer
     imagescrapper = ScrapperImage()
-    listimages=os.listdir("Scrapping_images/static")
+    listimages=os.listdir("static")
     imagescrapper.delete_download_images(listimages)### Deletes the existing images before trying to scrap the new image
         
     image_name=search_term.split()
