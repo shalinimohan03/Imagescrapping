@@ -56,7 +56,7 @@ class ScrapperImage:
                     count=count+1
                 req=urllib.request.Request(img,headers=header)
                 try:
-                    urllib.request.urlretrieve(img,"C:/Users/Viswanath/shalini_DSPractice/Scrapping_images/static"+image_name+str(image_count)+".jpg")
+                    urllib.request.urlretrieve(img,"./static/"+image_name+str(image_count)+".jpg")
                     image_count=image_count+1
                 except Exception as e :
                     print("Storing and naming image failed:",e)
@@ -77,7 +77,7 @@ class ScrapperImage:
     def delete_downloaded_images(self,list_of_images):
         for self.image in list_of_images:
             try:
-                os.remove("C:/Users/Viswanath/shalini_DSPractice/Scrapping_images/static"+self.image)
+                os.remove("./static/"+self.image)
             except Exception as e:
                 print("error in deleting the images",e)
                 
