@@ -48,7 +48,7 @@ def searchImage(): # This basically uses the index.html to get the keyword enter
     imagescrapperutil = BusinessLayer
     imagescrapper = ScrapperImage()
     listimages=os.listdir("static")
-    imagescrapper.delete_download_images(listimages)### Deletes the existing images before trying to scrap the new image
+    imagescrapper.delete_downloaded_images(listimages)### Deletes the existing images before trying to scrap the new image
         
     image_name=search_term.split()
     image_name="+".join(image_name)
