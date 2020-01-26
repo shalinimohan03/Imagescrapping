@@ -15,7 +15,7 @@ class BusinessLayer:
     
     def downloadImages(keyword,header):
         imgscrapper=ScrapperImage
-        url= imgscrapper.createImageUrl(Keyword)## This will ive you weburl to webscrap to next function
+        url= imgscrapper.createImageUrl(keyword)## This will ive you weburl to webscrap to next function
         rawhtml=imgscrapper.scrap_html_data(url,header)
         
         imageURLlist=imgscrapper.getimageUrlList(rawhtml)
